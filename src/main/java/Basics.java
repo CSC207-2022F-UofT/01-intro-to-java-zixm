@@ -101,8 +101,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-
-
+        for (int x = 10; x >= 0; x--) {
+            System.out.println("Current count: " + x);
+        }
     }
 
     /**
@@ -145,6 +146,10 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
+        String[] arr = to_split.split(" ");
+        for (int x = 0; x < 7; x++) {
+            ret.append(arr[x].charAt(0));
+        }
 
         return ret.toString();
     }
@@ -172,6 +177,11 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        if (arr.length > 1) {
+            for (int x = 1; x < arr.length; x += 2) {
+                current_sum += arr[x];
+            }
+        }
 
         return current_sum;
     }
